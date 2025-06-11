@@ -1,0 +1,33 @@
+# LaTeX build files
+*.aux
+*.log
+*.out
+*.toc
+*.lof
+*.lot
+*.fls
+*.fdb_latexmk
+*.synctex.gz
+*.bbl
+*.blg
+*.nav
+*.snm
+*.vrb
+*.bcf
+*.bbl-SAVE-ERROR
+
+# VSCode settings
+.vscode/
+
+# Output PDFs and images generated during compilation
+*.pdf
+*.dvi
+*.ps
+
+# Temporary files
+*~
+*.bak
+
+# OS-specific files
+.DS_Store
+Thumbs.db

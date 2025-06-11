@@ -1,0 +1,54 @@
+\section{Formulación del problema}
+El objetivo es interceptar dos objetos (naves, sálelites, etc) con un sólo impulso.
+Para ello, planteamos seis variables independientes:
+
+\begin{itemize}
+    \item $t_0$: tiempo de impulso.
+    \item $t_1$: tiempo de intercepción con el primer objetivo.
+    \item $t_2$: tiempo de intercepción con el segundo objetivo.
+    \item $\Delta{v}$: vector de impulso (contiene tres componentes).
+\end{itemize}
+
+Con el método de Gibbs, se calcula la velocidad de la nave perseguidora en los tiempos
+$t_0$, $t_1$, y $t_2$. Con estos tres vectores, podemos determinar por completo la órbita
+de interceptación. Luego, quedan 3 variables, en las siguientes ecuaciones:
+
+\begin{equation}
+    t_1 - t_0 = \frac{M_{3, t_1} - M_{3, t_0}}{n_3}
+\end{equation}
+\begin{equation}
+    t_2 - t_0 = \frac{M_{3, t_2} - M_{3, t_0}}{n_3}
+\end{equation}
+
+Suponiendo que el tiempo inicial $t_i$ es conocido, y por tanto calculado $t_2$, y además despreciamos
+el efecto de la perturbación J2, podemos expresar $t_2$ como una función de $t_1$ y $t_0$ \parencite{xia2021}.
+Por lo tanto, el problema se reduce a dos variables independientes.
+
+Con las ecuaciones (3) y (4), podemos armar el siguiente sistema de ecuaciones \parencite{xia2021}:
+
+\begin{equation}
+    \mathbf{F}(t_0, t_1) =
+    \begin{Bmatrix}
+        Q_1 \\ Q_2
+    \end{Bmatrix}
+    =
+    \begin{Bmatrix}
+        0 \\ 0
+    \end{Bmatrix}
+\end{equation}
+
+donde
+\begin{equation}
+    \left\{
+    \begin{aligned}
+        Q_1 & = (t_1 - t_0) - \frac{M_{3, t_1} - M_{3, t_0}}{n_3} \\
+        Q_2 & = (t_2 - t_0) - \frac{M_{3, t_2} - M_{3, t_0}}{n_3}
+    \end{aligned}
+    \right.
+\end{equation}
+
+Note que $t_0 < t_1 < t_2$.
+
+Posteriormente, se estudiarán las variables $M_{j,t_k}$. Estos variables, que representan la anomalía,
+media, se calculan con la ecuación de Kepler \parencite{xia2021}, y son críticas para el modelo matemático
+ya que permiten calcular la posición de un objeto que se mueve en una de las tres órbitas, sobre todo la de interceptación.

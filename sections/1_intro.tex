@@ -1,0 +1,26 @@
+\section{Introducción}
+
+La exploración espacial ha avanzado significativamente gracias al desarrollo de tecnologías
+que permiten ejecutar misiones más eficientes y de bajo costo. Sin embargo, la planificación de las trayectorias
+y cambios de dirección siguen requiriendo una cantidad considerable de apoyo terrestre. En este contexto, surge el interés
+por minimizar la cantidad de impulsos para llegar o interceptar a objetivos, una tarea importante en el mantenimiento de satélites
+y exploración interplanetaria \parencite{ZHU20162177}.
+
+El trabajo de Xia et al. (2021) propone un método numérico para resolver el problema de intercepción de dos objetivos
+con un solo impulso, permitiendo posiciones de impulso e intercepción libres, tanto en órbitas elípticas como hiperbólicas \parencite{xia2021}.
+Este enfoque reduce el problema original —de seis variables— a un sistema no lineal de solo dos variables independientes,
+resuelto con el método de Newton-Raphson y estimaciones iniciales obtenidas mediante \textit{porkchop plots}.
+Además, se extiende a modelos perturbados por el coeficiente J2 utilizando homotopía y corrección diferencial.
+
+Estudios complementarios, como el de Duan y Liu (2020), exploran alternativas al clásico método de porkchop plots,
+proponiendo un enfoque bidimensional más eficiente para determinar ventanas de lanzamiento, lo cual puede ser útil
+en la etapa de estimación inicial de trayectorias \parencite{DUAN2020965}.
+
+Por otro lado, el uso de propulsión eléctrica en satélites pequeños, como los CubeSats, ha abierto nuevas posibilidades para
+misiones autónomas más complejas. Sistemas como los \textit{electrospray thrusters} o los \textit{gridded ion thrusters} ofrecen maniobras
+precisas con menos consumo de combustible, lo cual refuerza la relevancia de modelos como el propuesto por Xia et al.\@ para planificar
+trayectorias de forma óptima \parencite{oreilly2021}.
+
+De forma complementaria, Zhu y Yan (2016) presentan un esquema de maniobra con dos impulsos tangenciales
+en órbitas elípticas, que enfatiza la eficiencia de combustible bajo restricciones de tiempo y geometría, lo que sustenta
+la importancia de estudiar intercepciones óptimas desde un punto de vista numérico \parencite{ZHU20162177}.
