@@ -46,6 +46,12 @@
 
 \usepackage{amssymb}
 
+\usepackage{tikz}
+
+\usepackage{float}
+
+
+
 \begin{document}
 
 \input{./cover.tex}
@@ -58,11 +64,15 @@
 % Makes footnotes with an asterisk
 \renewcommand*{\thefootnote}{\fnsymbol{footnote}}
 
-% \begin{abstract}
-%     \input{./abstract.tex}
-% \end{abstract}
-%{\color{gray}\hrule}
-%\medskip
+\begin{abstract}
+    \input{./abstract.tex}
+\end{abstract}
+
+\noindent\textbf{Palabras clave:} intercepción orbital, método de Gibbs, método de Newton-Raphson, Porkchop plot, mecánica orbital, Two Body Model
+\vspace{0.5cm}
+
+{\color{gray}\hrule}
+\medskip
 \begin{multicols}{2}
     \renewcommand{\contentsname}{Índice}
     \tableofcontents
@@ -71,8 +81,21 @@
     \input{./sections/3_justificacion.tex}
     \input{./sections/4_marco.tex}
     \input{./sections/5_formulacion.tex}
+    \input{./sections/6_metodologia.tex}
+    \input{./sections/7_resultados.tex}
+    \input{./sections/8_discusion.tex}
+    \input{./sections/9_conclusiones.tex}
+    \input{./sections/10_recomendaciones.tex}
 \end{multicols}
-
+\newpage
 \printbibliography[title={Referencias}]
+
+\appendix
+\section*{Anexo}
+El código de MATLAB utilizado está disponible en el siguiente repositorio de GitHub:
+
+\begin{itemize}
+    \item \url{https://github.com/DanielCasquino/metnum_g9}
+\end{itemize}
 
 \end{document}
